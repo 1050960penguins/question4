@@ -29,3 +29,16 @@ bodymass_flipper_plot<- ggplot(penguins_clean1, aes(x= body_mass_g, y=flipper_le
 bodymass_flipper_plot
 #plotting a scattergraph of body mass vs flipper length with a linear model overlayed
 
+
+library(svglite)
+svglite("figures/fig1_vector.svg", 
+        width = 5.9, height = 5.9)
+bodymass_flipper_plot
+dev.off()
+
+# Render the svg into a png image with rsvg via magick
+img <- magick::image_read_svg("figures/fig1_vector.svg", width = 1080)
+magick::image_write(img, 'fig1_vector.png')
+img
+
+#saved as a vector and displayed as a png
