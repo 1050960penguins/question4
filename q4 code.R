@@ -28,3 +28,4 @@ bodymass_flipper_plot<- ggplot(penguins_clean1, aes(x= body_mass_g, y=flipper_le
 
 bodymass_flipper_plot
 #plotting a scattergraph of body mass vs flipper length with a linear model overlayed
+
